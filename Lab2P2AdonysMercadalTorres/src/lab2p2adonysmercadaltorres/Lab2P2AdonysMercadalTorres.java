@@ -94,6 +94,25 @@ public static boolean profesor;
                     break;
                 case 2:
                     System.out.println("Crear recursos");
+                    System.out.println("1.Libros");
+                    System.out.println("2.Articulos");
+                    System.out.println("3.Cursos en Linea");
+                    System.out.println("4.Conferencias Virtuales");
+                switch (opc){
+                    case 1:
+                        System.out.println("Ingrese el nombre del libro:");
+                        String nombre = n.nextLine();
+                        System.out.println("");
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                }
+                    break;
+                    
                 case 3:
                     System.out.println("Saliendo....");
                     entrar += 2;
