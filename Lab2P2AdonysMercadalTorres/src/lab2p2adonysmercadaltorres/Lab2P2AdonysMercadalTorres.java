@@ -40,7 +40,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
             switch (opc){
                 case 1:
                     System.out.println("Lista de los Recursos");
-                    System.out.println("Hola");
+                    listarM();
                     break;
                 case 2:
                     System.out.println("Saliendo....");
@@ -64,6 +64,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
             switch (opc){
                 case 1:
                     System.out.println("Lista de los Recursos");
+                    listarM();
                     break;
                 case 2:
                     System.out.println("Crear recursos");
@@ -104,6 +105,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                         disponible = true;
                         System.out.println("Ingrese el titulo del articulo:");
                         String titul = n.nextLine();
+                        titul = n.nextLine();
                         System.out.println("Ingrese el Autor del articulo:");
                         String autore = n.nextLine();
                         System.out.println("Ingrese el tema del articulo:");
@@ -130,6 +132,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                         disponible = true;
                         System.out.println("Ingrese el titulo del Curso:");
                         String titu = n.nextLine();
+                        titu = n.nextLine();
                         System.out.println("Ingrese el Instructor:");
                         String instructor = n.nextLine();
                         System.out.println("Ingrese la duracion:");
@@ -143,6 +146,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                          disponible = true;
                         System.out.println("Ingrese el titulo del la conferencia:");
                         String titulos = n.nextLine();
+                        titulos = n.nextLine();
                         System.out.println("Ingrese el Conferisista:");
                         String conferisista = n.nextLine();
                         System.out.println("Ingrese la fecha:");
@@ -182,7 +186,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
             switch (opc){
                 case 1:
                     System.out.println("Lista de los Recursos");
-                    System.out.println("Hola");
+                    listarM();
                     break;
                 case 2:
                     System.out.println("Crear recursos");
@@ -190,12 +194,13 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                     System.out.println("2.Articulos");
                     System.out.println("3.Cursos en Linea");
                     System.out.println("4.Conferencias Virtuales");
-                    opc = n.nextInt();
-                switch (opc){
+                    int opc2 = n.nextInt();
+                switch (opc2){
                     case 1:
                         boolean disponible = true;
                         System.out.println("Ingrese el titulo del libro:");
                         String titulo = n.nextLine();
+                        titulo= n.nextLine();
                         System.out.println("Ingrese el Autor del libro:");
                         String autor = n.nextLine();
                         System.out.println("Ingrese el genero del libro:");
@@ -222,6 +227,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                         disponible = true;
                         System.out.println("Ingrese el titulo del articulo:");
                         String titul = n.nextLine();
+                        titul = n.nextLine();
                         System.out.println("Ingrese el Autor del articulo:");
                         String autore = n.nextLine();
                         System.out.println("Ingrese el tema del articulo:");
@@ -248,6 +254,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                         disponible = true;
                         System.out.println("Ingrese el titulo del Curso:");
                         String titu = n.nextLine();
+                        titu = n.nextLine();
                         System.out.println("Ingrese el Instructor:");
                         String instructor = n.nextLine();
                         System.out.println("Ingrese la duracion:");
@@ -261,6 +268,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                          disponible = true;
                         System.out.println("Ingrese el titulo del la conferencia:");
                         String titulos = n.nextLine();
+                        titulos = n.nextLine();
                         System.out.println("Ingrese el Conferisista:");
                         String conferisista = n.nextLine();
                         System.out.println("Ingrese la fecha:");
@@ -280,6 +288,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                     break;
                 default:
                     System.out.println("Opcion no valida");
+                    break;
             }
             } 
         }
@@ -314,5 +323,30 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
 
         }
     }
-    
+    public static void listarM(){
+        System.out.println("Libros");
+        for (int i = 0; i < listLibros.size(); i++) {
+            Libros impr = listLibros.get(i);
+            System.out.println(impr);
+            System.out.println("");
+        }
+        System.out.println("Articulos");
+        for (int i = 0; i < listaArticu.size(); i++) {
+            Articulos impr = listaArticu.get(i);
+            System.out.println(impr);
+            System.out.println("");
+        }
+        System.out.println("Cursos");
+        for (int i = 0; i < listaCursos.size(); i++) {
+            Cursos impr = listaCursos.get(i);
+            System.out.println(impr);
+            System.out.println("");
+        }
+        System.out.println("Conferencias");
+        for (int i = 0; i < listaConfe.size(); i++) {
+            Conferencias impr = listaConfe.get(i);
+            System.out.println(impr);
+            System.out.println("");
+        }
+    }
 }
