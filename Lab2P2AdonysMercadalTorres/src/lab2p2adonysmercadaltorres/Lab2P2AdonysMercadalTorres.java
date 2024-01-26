@@ -4,6 +4,7 @@
  */
 package lab2p2adonysmercadaltorres;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -14,6 +15,10 @@ public class Lab2P2AdonysMercadalTorres {
 public static boolean estudiante;
 public static boolean biblioteca;
 public static boolean profesor;
+public static ArrayList <Libros> listLibros = new ArrayList();
+public static ArrayList<Articulos> listaArticu = new ArrayList();
+public static ArrayList <Cursos> listaCursos = new ArrayList();
+public static ArrayList<Conferencias> listaConfe = new ArrayList();
     /**
      * @param args the command line arguments
      */
@@ -100,9 +105,30 @@ public static boolean profesor;
                     System.out.println("4.Conferencias Virtuales");
                 switch (opc){
                     case 1:
-                        System.out.println("Ingrese el nombre del libro:");
-                        String nombre = n.nextLine();
-                        System.out.println("");
+                        boolean disponible = true;
+                        System.out.println("Ingrese el titulo del libro:");
+                        String titulo = n.nextLine();
+                        System.out.println("Ingrese el Autor del libro:");
+                        String autor = n.nextLine();
+                        System.out.println("Ingrese el genero del libro:");
+                        String genero = n.nextLine();
+                        System.out.println("Ingrese año de publicacion");
+                        String publicacion = n.nextLine();
+                        System.out.println("Disponibilidad Y/N");
+                        String dispo = n.nextLine();
+                        switch (dispo){
+                            case "Y":
+                                disponible = true;
+                                break;
+                            case "N":
+                                 disponible = false;
+                                break;
+                            default:
+                                System.out.println("Se ingreso mal o no es valido");
+                                break;
+                        }
+                        Libros NuevoLibro = new Libros(titulo,autor,genero,publicacion,disponible);
+                        listLibros.add(NuevoLibro);
                         break;
                     case 2:
                         break;
