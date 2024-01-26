@@ -24,7 +24,9 @@ public static boolean profesor;
         tipoP();
     }
     public static void tipoP(){
-        if(estudiante){
+        if(estudiante){//si es estudiante entra a las opciones limitadas de ese tipo
+            int entrar = 1;
+            while(entrar == 1){
             Scanner n = new Scanner(System.in);
             System.out.println("Bienvenido Estudiante");
             System.out.println("1.Listar recursos");
@@ -33,12 +35,73 @@ public static boolean profesor;
             switch (opc){
                 case 1:
                     System.out.println("Lista de los Recursos");
+                    System.out.println("Hola");
+                    break;
+                case 2:
+                    System.out.println("Saliendo....");
+                    entrar += 2;
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
             }
-            
-        }else if (biblioteca){
+            }  
+        }else if (biblioteca){//si es bibliotecario entra en modo dios
+            int entrar = 1;
+            while(entrar == 1){
+            Scanner n = new Scanner(System.in);
             System.out.println("Bienvenido Bibliotecario");
-        }else if(profesor){
-            System.out.println("Bienvenido profesor");
+            System.out.println("1.Listar recursos");
+            System.out.println("2.Crear Recursos");
+            System.out.println("3.Elimar recurso");
+                System.out.println("4.Modificar Recurso");
+                System.out.println("5.Salir");
+            
+            int opc = n.nextInt();
+            switch (opc){
+                case 1:
+                    System.out.println("Lista de los Recursos");
+                    break;
+                case 2:
+                    System.out.println("Crear Recursos");
+                    break;
+                case 5:
+                    System.out.println("Saliendo....");
+                    entrar += 2;
+                    break;
+                case 3:
+                    System.out.println("Eliminar Recursos");
+                    break;
+                case 4:
+                    System.out.println("Modificar Recursos");
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
+            }
+            }
+        }else if(profesor){//si es profesor """""""""""
+            int entrar = 1;
+            while(entrar == 1){
+            Scanner n = new Scanner(System.in);
+            System.out.println("Bienvenido Profesor");
+            System.out.println("1.Listar recursos");
+                System.out.println("2.Crear recursos");
+            System.out.println("3.Salir");
+            int opc = n.nextInt();
+            switch (opc){
+                case 1:
+                    System.out.println("Lista de los Recursos");
+                    System.out.println("Hola");
+                    break;
+                case 2:
+                    System.out.println("Crear recursos");
+                case 3:
+                    System.out.println("Saliendo....");
+                    entrar += 2;
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
+            }
+            } 
         }
 
     }
