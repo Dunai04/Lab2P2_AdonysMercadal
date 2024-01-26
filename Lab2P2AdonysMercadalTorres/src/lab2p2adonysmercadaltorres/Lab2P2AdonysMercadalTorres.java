@@ -67,8 +67,93 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                     System.out.println("Lista de los Recursos");
                     break;
                 case 2:
-                    System.out.println("Crear Recursos");
-                    break;
+                    System.out.println("Crear recursos");
+                    System.out.println("1.Libros");
+                    System.out.println("2.Articulos");
+                    System.out.println("3.Cursos en Linea");
+                    System.out.println("4.Conferencias Virtuales");
+                switch (opc){
+                    case 1:
+                        boolean disponible = true;
+                        System.out.println("Ingrese el titulo del libro:");
+                        String titulo = n.nextLine();
+                        System.out.println("Ingrese el Autor del libro:");
+                        String autor = n.nextLine();
+                        System.out.println("Ingrese el genero del libro:");
+                        String genero = n.nextLine();
+                        System.out.println("Ingrese año de publicacion");
+                        String publicacion = n.nextLine();
+                        System.out.println("Disponibilidad Y/N");
+                        String dispo = n.nextLine();
+                        switch (dispo){
+                            case "Y":
+                                disponible = true;
+                                break;
+                            case "N":
+                                 disponible = false;
+                                break;
+                            default:
+                                System.out.println("Se ingreso mal o no es valido");
+                                break;
+                        }
+                        Libros NuevoLibro = new Libros(titulo,autor,genero,publicacion,disponible);
+                        listLibros.add(NuevoLibro);
+                        break;
+                    case 2:
+                        disponible = true;
+                        System.out.println("Ingrese el titulo del articulo:");
+                        String titul = n.nextLine();
+                        System.out.println("Ingrese el Autor del articulo:");
+                        String autore = n.nextLine();
+                        System.out.println("Ingrese el tema del articulo:");
+                        String tema = n.nextLine();
+                        System.out.println("Ingrese año de publicacion");
+                        String publicacione = n.nextLine();
+                        System.out.println("Disponibilidad Y/N");
+                        String dispos = n.nextLine();
+                        switch (dispos){
+                            case "Y":
+                                disponible = true;
+                                break;
+                            case "N":
+                                 disponible = false;
+                                break;
+                            default:
+                                System.out.println("Se ingreso mal o no es valido");
+                                break;
+                        }
+                        Articulos NuevoArt = new Articulos(titul,autore,tema,publicacione,disponible);
+                        listaArticu.add(NuevoArt);
+                        break;
+                    case 3:
+                        disponible = true;
+                        System.out.println("Ingrese el titulo del Curso:");
+                        String titu = n.nextLine();
+                        System.out.println("Ingrese el Instructor:");
+                        String instructor = n.nextLine();
+                        System.out.println("Ingrese la duracion:");
+                        String duracion = n.nextLine();
+                        System.out.println("Ingrese la plataforma");
+                        String plataforma = n.nextLine();
+                        Cursos nuevoCurs = new Cursos(titu,instructor,duracion,plataforma);
+                        listaCursos.add(nuevoCurs);
+                        break;
+                    case 4:
+                         disponible = true;
+                        System.out.println("Ingrese el titulo del la conferencia:");
+                        String titulos = n.nextLine();
+                        System.out.println("Ingrese el Conferisista:");
+                        String conferisista = n.nextLine();
+                        System.out.println("Ingrese la fecha:");
+                        String fecha = n.nextLine();
+                        System.out.println("Ingrese la duracion");
+                        String duracione = n.nextLine();
+                        System.out.println("Ingrese enlace");
+                        String enlace = n.nextLine();
+                         Conferencias nuevaConf = new Conferencias(titulos,conferisista,fecha,duracione,enlace);
+                        listaConfe.add(nuevaConf);
+                        break;
+                } 
                 case 5:
                     System.out.println("Saliendo....");
                     entrar += 2;
@@ -131,14 +216,60 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                         listLibros.add(NuevoLibro);
                         break;
                     case 2:
+                        disponible = true;
+                        System.out.println("Ingrese el titulo del articulo:");
+                        String titul = n.nextLine();
+                        System.out.println("Ingrese el Autor del articulo:");
+                        String autore = n.nextLine();
+                        System.out.println("Ingrese el tema del articulo:");
+                        String tema = n.nextLine();
+                        System.out.println("Ingrese año de publicacion");
+                        String publicacione = n.nextLine();
+                        System.out.println("Disponibilidad Y/N");
+                        String dispos = n.nextLine();
+                        switch (dispos){
+                            case "Y":
+                                disponible = true;
+                                break;
+                            case "N":
+                                 disponible = false;
+                                break;
+                            default:
+                                System.out.println("Se ingreso mal o no es valido");
+                                break;
+                        }
+                        Articulos NuevoArt = new Articulos(titul,autore,tema,publicacione,disponible);
+                        listaArticu.add(NuevoArt);
                         break;
                     case 3:
+                        disponible = true;
+                        System.out.println("Ingrese el titulo del Curso:");
+                        String titu = n.nextLine();
+                        System.out.println("Ingrese el Instructor:");
+                        String instructor = n.nextLine();
+                        System.out.println("Ingrese la duracion:");
+                        String duracion = n.nextLine();
+                        System.out.println("Ingrese la plataforma");
+                        String plataforma = n.nextLine();
+                        Cursos nuevoCurs = new Cursos(titu,instructor,duracion,plataforma);
+                        listaCursos.add(nuevoCurs);
                         break;
                     case 4:
+                         disponible = true;
+                        System.out.println("Ingrese el titulo del la conferencia:");
+                        String titulos = n.nextLine();
+                        System.out.println("Ingrese el Conferisista:");
+                        String conferisista = n.nextLine();
+                        System.out.println("Ingrese la fecha:");
+                        String fecha = n.nextLine();
+                        System.out.println("Ingrese la duracion");
+                        String duracione = n.nextLine();
+                        System.out.println("Ingrese enlace");
+                        String enlace = n.nextLine();
+                         Conferencias nuevaConf = new Conferencias(titulos,conferisista,fecha,duracione,enlace);
+                        listaConfe.add(nuevaConf);
                         break;
-                }
-                    break;
-                    
+                } 
                 case 3:
                     System.out.println("Saliendo....");
                     entrar += 2;
