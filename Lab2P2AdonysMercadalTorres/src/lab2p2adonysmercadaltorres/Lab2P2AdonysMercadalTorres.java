@@ -4,6 +4,8 @@
  */
 package lab2p2adonysmercadaltorres;
 
+import java.util.Scanner;
+
 /**
  *
  * @author adony
@@ -14,7 +16,28 @@ public class Lab2P2AdonysMercadalTorres {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //menu
+        Scanner n = new Scanner(System.in);
+        String usuario;
+        String contrasena;
+        boolean login = true;
+        while(login){
+            System.out.println("Ingrse Usuario");
+            usuario = n.nextLine();
+            if(usuario == "adonys@gmail.com"||usuario == "venus@gmail.com"||usuario== "irene@gmail.com"){
+               System.out.println("Ingrese contrasena");
+            contrasena = n.nextLine(); 
+            if(contrasena=="Dunai04"){
+                
+            }else if(contrasena=="Venas10"){
+                
+            }else if(contrasena=="Irenex92"){
+                
+            
+        }else{
+                System.out.println("El ususario no existe");
+            }
     }
     
 }
+    }
