@@ -25,7 +25,16 @@ public static boolean profesor;
     }
     public static void tipoP(){
         if(estudiante){
+            Scanner n = new Scanner(System.in);
             System.out.println("Bienvenido Estudiante");
+            System.out.println("1.Listar recursos");
+            System.out.println("2.Salir");
+            int opc = n.nextInt();
+            switch (opc){
+                case 1:
+                    System.out.println("Lista de los Recursos");
+            }
+            
         }else if (biblioteca){
             System.out.println("Bienvenido Bibliotecario");
         }else if(profesor){
