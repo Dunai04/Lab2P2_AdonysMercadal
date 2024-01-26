@@ -13,7 +13,8 @@ import java.util.Date;
 public class Conferencias {//atributos
     protected String titulo;
     protected String conferencista;
-    protected Date fecha;
+    protected String fecha;
     protected String duracion;
     protected String enlace;
+    
 }
