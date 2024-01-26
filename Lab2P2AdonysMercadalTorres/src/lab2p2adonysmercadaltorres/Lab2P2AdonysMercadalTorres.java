@@ -60,7 +60,6 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
             System.out.println("3.Elimar recurso");
                 System.out.println("4.Modificar Recurso");
                 System.out.println("5.Salir");
-            
             int opc = n.nextInt();
             switch (opc){
                 case 1:
@@ -72,11 +71,13 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                     System.out.println("2.Articulos");
                     System.out.println("3.Cursos en Linea");
                     System.out.println("4.Conferencias Virtuales");
-                switch (opc){
+                    int opc2 = n.nextInt();
+                switch (opc2){
                     case 1:
                         boolean disponible = true;
                         System.out.println("Ingrese el titulo del libro:");
                         String titulo = n.nextLine();
+                        titulo= n.nextLine();
                         System.out.println("Ingrese el Autor del libro:");
                         String autor = n.nextLine();
                         System.out.println("Ingrese el genero del libro:");
@@ -154,6 +155,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                         listaConfe.add(nuevaConf);
                         break;
                 } 
+                break;
                 case 5:
                     System.out.println("Saliendo....");
                     entrar += 2;
@@ -188,6 +190,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                     System.out.println("2.Articulos");
                     System.out.println("3.Cursos en Linea");
                     System.out.println("4.Conferencias Virtuales");
+                    opc = n.nextInt();
                 switch (opc){
                     case 1:
                         boolean disponible = true;
@@ -270,6 +273,7 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
                         listaConfe.add(nuevaConf);
                         break;
                 } 
+                break;
                 case 3:
                     System.out.println("Saliendo....");
                     entrar += 2;
