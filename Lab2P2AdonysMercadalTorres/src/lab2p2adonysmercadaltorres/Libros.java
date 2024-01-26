@@ -4,10 +4,17 @@
  */
 package lab2p2adonysmercadaltorres;
 
+import java.util.Date;
+
 /**
  *
  * @author adony
  */
 public class Libros {
+    protected String titulo;
+    protected String Autor;
+    protected String Genero;
+    protected Date Publicacion;
+    protected boolean disponibilidad;
     
 }

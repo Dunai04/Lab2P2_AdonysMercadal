@@ -8,6 +8,10 @@ package lab2p2adonysmercadaltorres;
  *
  * @author adony
  */
-public class Cursos {
+public class Cursos {//atributos
+    protected String titulo;
+    protected String instructor;
+    protected String duracion;
+    protected String plataforma;
     
 }

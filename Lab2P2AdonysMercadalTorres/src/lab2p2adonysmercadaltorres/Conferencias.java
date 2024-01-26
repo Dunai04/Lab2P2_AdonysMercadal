@@ -4,10 +4,16 @@
  */
 package lab2p2adonysmercadaltorres;
 
+import java.util.Date;
+
 /**
  *
  * @author adony
  */
-public class Conferencias {
-    
+public class Conferencias {//atributos
+    protected String titulo;
+    protected String conferencista;
+    protected Date fecha;
+    protected String duracion;
+    protected String enlace;
 }
