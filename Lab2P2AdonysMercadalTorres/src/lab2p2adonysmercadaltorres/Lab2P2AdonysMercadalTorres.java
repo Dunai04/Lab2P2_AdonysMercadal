@@ -12,13 +12,15 @@ import java.util.Scanner;
  * @author adony
  */
 public class Lab2P2AdonysMercadalTorres {
-public static boolean estudiante;
-public static boolean biblioteca;
-public static boolean profesor;
-public static ArrayList <Libros> listLibros = new ArrayList();
-public static ArrayList<Articulos> listaArticu = new ArrayList();
-public static ArrayList <Cursos> listaCursos = new ArrayList();
-public static ArrayList<Conferencias> listaConfe = new ArrayList();
+
+    public static boolean estudiante;
+    public static boolean biblioteca;
+    public static boolean profesor;
+    public static ArrayList<Libros> listLibros = new ArrayList();
+    public static ArrayList<Articulos> listaArticu = new ArrayList();
+    public static ArrayList<Cursos> listaCursos = new ArrayList();
+    public static ArrayList<Conferencias> listaConfe = new ArrayList();
+
     /**
      * @param args the command line arguments
      */
@@ -28,273 +30,275 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
         login();
         tipoP();
     }
-    public static void tipoP(){
-        if(estudiante){//si es estudiante entra a las opciones limitadas de ese tipo
+
+    public static void tipoP() {
+        if (estudiante) {//si es estudiante entra a las opciones limitadas de ese tipo
             int entrar = 1;
-            while(entrar == 1){
-            Scanner n = new Scanner(System.in);
-            System.out.println("Bienvenido Estudiante");
-            System.out.println("1.Listar recursos");
-            System.out.println("2.Salir");
-            int opc = n.nextInt();
-            switch (opc){
-                case 1:
-                    System.out.println("Lista de los Recursos");
-                    listarM();
-                    break;
-                case 2:
-                    System.out.println("Saliendo....");
-                    entrar += 2;
-                    break;
-                default:
-                    System.out.println("Opcion no valida");
+            while (entrar == 1) {
+                Scanner n = new Scanner(System.in);
+                System.out.println("Bienvenido Estudiante");
+                System.out.println("1.Listar recursos");
+                System.out.println("2.Salir");
+                int opc = n.nextInt();
+                switch (opc) {
+                    case 1:
+                        System.out.println("Lista de los Recursos");
+                        listarM();
+                        break;
+                    case 2:
+                        System.out.println("Saliendo....");
+                        entrar += 2;
+                        break;
+                    default:
+                        System.out.println("Opcion no valida");
+                }
             }
-            }  
-        }else if (biblioteca){//si es bibliotecario entra en modo dios
+        } else if (biblioteca) {//si es bibliotecario entra en modo dios
             int entrar = 1;
-            while(entrar == 1){
-            Scanner n = new Scanner(System.in);
-            System.out.println("Bienvenido Bibliotecario");
-            System.out.println("1.Listar recursos");
-            System.out.println("2.Crear Recursos");
-            System.out.println("3.Elimar recurso");
+            while (entrar == 1) {
+                Scanner n = new Scanner(System.in);
+                System.out.println("Bienvenido Bibliotecario");
+                System.out.println("1.Listar recursos");
+                System.out.println("2.Crear Recursos");
+                System.out.println("3.Elimar recurso");
                 System.out.println("4.Modificar Recurso");
                 System.out.println("5.Salir");
-            int opc = n.nextInt();
-            switch (opc){
-                case 1:
-                    System.out.println("Lista de los Recursos");
-                    listarM();
-                    break;
-                case 2:
-                    System.out.println("Crear recursos");
-                    System.out.println("1.Libros");
-                    System.out.println("2.Articulos");
-                    System.out.println("3.Cursos en Linea");
-                    System.out.println("4.Conferencias Virtuales");
-                    int opc2 = n.nextInt();
-                switch (opc2){
+                int opc = n.nextInt();
+                switch (opc) {
                     case 1:
-                        boolean disponible = true;
-                        System.out.println("Ingrese el titulo del libro:");
-                        String titulo = n.nextLine();
-                        titulo= n.nextLine();
-                        System.out.println("Ingrese el Autor del libro:");
-                        String autor = n.nextLine();
-                        System.out.println("Ingrese el genero del libro:");
-                        String genero = n.nextLine();
-                        System.out.println("Ingrese año de publicacion");
-                        String publicacion = n.nextLine();
-                        System.out.println("Disponibilidad Y/N");
-                        String dispo = n.nextLine();
-                        switch (dispo){
-                            case "Y":
-                                disponible = true;
-                                break;
-                            case "N":
-                                 disponible = false;
-                                break;
-                            default:
-                                System.out.println("Se ingreso mal o no es valido");
-                                break;
-                        }
-                        Libros NuevoLibro = new Libros(titulo,autor,genero,publicacion,disponible);
-                        listLibros.add(NuevoLibro);
+                        System.out.println("Lista de los Recursos");
+                        listarM();
                         break;
                     case 2:
-                        disponible = true;
-                        System.out.println("Ingrese el titulo del articulo:");
-                        String titul = n.nextLine();
-                        titul = n.nextLine();
-                        System.out.println("Ingrese el Autor del articulo:");
-                        String autore = n.nextLine();
-                        System.out.println("Ingrese el tema del articulo:");
-                        String tema = n.nextLine();
-                        System.out.println("Ingrese año de publicacion");
-                        String publicacione = n.nextLine();
-                        System.out.println("Disponibilidad Y/N");
-                        String dispos = n.nextLine();
-                        switch (dispos){
-                            case "Y":
+                        System.out.println("Crear recursos");
+                        System.out.println("1.Libros");
+                        System.out.println("2.Articulos");
+                        System.out.println("3.Cursos en Linea");
+                        System.out.println("4.Conferencias Virtuales");
+                        int opc2 = n.nextInt();
+                        switch (opc2) {
+                            case 1:
+                                boolean disponible = true;
+                                System.out.println("Ingrese el titulo del libro:");
+                                String titulo = n.nextLine();
+                                titulo = n.nextLine();
+                                System.out.println("Ingrese el Autor del libro:");
+                                String autor = n.nextLine();
+                                System.out.println("Ingrese el genero del libro:");
+                                String genero = n.nextLine();
+                                System.out.println("Ingrese año de publicacion");
+                                String publicacion = n.nextLine();
+                                System.out.println("Disponibilidad Y/N");
+                                String dispo = n.nextLine();
+                                switch (dispo) {
+                                    case "Y":
+                                        disponible = true;
+                                        break;
+                                    case "N":
+                                        disponible = false;
+                                        break;
+                                    default:
+                                        System.out.println("Se ingreso mal o no es valido");
+                                        break;
+                                }
+                                Libros NuevoLibro = new Libros(titulo, autor, genero, publicacion, disponible);
+                                listLibros.add(NuevoLibro);
+                                break;
+                            case 2:
                                 disponible = true;
+                                System.out.println("Ingrese el titulo del articulo:");
+                                String titul = n.nextLine();
+                                titul = n.nextLine();
+                                System.out.println("Ingrese el Autor del articulo:");
+                                String autore = n.nextLine();
+                                System.out.println("Ingrese el tema del articulo:");
+                                String tema = n.nextLine();
+                                System.out.println("Ingrese año de publicacion");
+                                String publicacione = n.nextLine();
+                                System.out.println("Disponibilidad Y/N");
+                                String dispos = n.nextLine();
+                                switch (dispos) {
+                                    case "Y":
+                                        disponible = true;
+                                        break;
+                                    case "N":
+                                        disponible = false;
+                                        break;
+                                    default:
+                                        System.out.println("Se ingreso mal o no es valido");
+                                        break;
+                                }
+                                Articulos NuevoArt = new Articulos(titul, autore, tema, publicacione, disponible);
+                                listaArticu.add(NuevoArt);
                                 break;
-                            case "N":
-                                 disponible = false;
+                            case 3:
+                                disponible = true;
+                                System.out.println("Ingrese el titulo del Curso:");
+                                String titu = n.nextLine();
+                                titu = n.nextLine();
+                                System.out.println("Ingrese el Instructor:");
+                                String instructor = n.nextLine();
+                                System.out.println("Ingrese la duracion:");
+                                String duracion = n.nextLine();
+                                System.out.println("Ingrese la plataforma");
+                                String plataforma = n.nextLine();
+                                Cursos nuevoCurs = new Cursos(titu, instructor, duracion, plataforma);
+                                listaCursos.add(nuevoCurs);
                                 break;
-                            default:
-                                System.out.println("Se ingreso mal o no es valido");
+                            case 4:
+                                disponible = true;
+                                System.out.println("Ingrese el titulo del la conferencia:");
+                                String titulos = n.nextLine();
+                                titulos = n.nextLine();
+                                System.out.println("Ingrese el Conferisista:");
+                                String conferisista = n.nextLine();
+                                System.out.println("Ingrese la fecha:");
+                                String fecha = n.nextLine();
+                                System.out.println("Ingrese la duracion");
+                                String duracione = n.nextLine();
+                                System.out.println("Ingrese enlace");
+                                String enlace = n.nextLine();
+                                Conferencias nuevaConf = new Conferencias(titulos, conferisista, fecha, duracione, enlace);
+                                listaConfe.add(nuevaConf);
                                 break;
                         }
-                        Articulos NuevoArt = new Articulos(titul,autore,tema,publicacione,disponible);
-                        listaArticu.add(NuevoArt);
+                        break;
+                    case 5:
+                        System.out.println("Saliendo....");
+                        entrar += 2;
                         break;
                     case 3:
-                        disponible = true;
-                        System.out.println("Ingrese el titulo del Curso:");
-                        String titu = n.nextLine();
-                        titu = n.nextLine();
-                        System.out.println("Ingrese el Instructor:");
-                        String instructor = n.nextLine();
-                        System.out.println("Ingrese la duracion:");
-                        String duracion = n.nextLine();
-                        System.out.println("Ingrese la plataforma");
-                        String plataforma = n.nextLine();
-                        Cursos nuevoCurs = new Cursos(titu,instructor,duracion,plataforma);
-                        listaCursos.add(nuevoCurs);
+                        System.out.println("Eliminar Recursos");
                         break;
                     case 4:
-                         disponible = true;
-                        System.out.println("Ingrese el titulo del la conferencia:");
-                        String titulos = n.nextLine();
-                        titulos = n.nextLine();
-                        System.out.println("Ingrese el Conferisista:");
-                        String conferisista = n.nextLine();
-                        System.out.println("Ingrese la fecha:");
-                        String fecha = n.nextLine();
-                        System.out.println("Ingrese la duracion");
-                        String duracione = n.nextLine();
-                        System.out.println("Ingrese enlace");
-                        String enlace = n.nextLine();
-                         Conferencias nuevaConf = new Conferencias(titulos,conferisista,fecha,duracione,enlace);
-                        listaConfe.add(nuevaConf);
+                        System.out.println("Modificar Recursos");
                         break;
-                } 
-                break;
-                case 5:
-                    System.out.println("Saliendo....");
-                    entrar += 2;
-                    break;
-                case 3:
-                    System.out.println("Eliminar Recursos");
-                    break;
-                case 4:
-                    System.out.println("Modificar Recursos");
-                    break;
-                default:
-                    System.out.println("Opcion no valida");
+                    default:
+                        System.out.println("Opcion no valida");
+                }
             }
-            }
-        }else if(profesor){//si es profesor """""""""""
+        } else if (profesor) {//si es profesor """""""""""
             int entrar = 1;
-            while(entrar == 1){
-            Scanner n = new Scanner(System.in);
-            System.out.println("Bienvenido Profesor");
-            System.out.println("1.Listar recursos");
+            while (entrar == 1) {
+                Scanner n = new Scanner(System.in);
+                System.out.println("Bienvenido Profesor");
+                System.out.println("1.Listar recursos");
                 System.out.println("2.Crear recursos");
-            System.out.println("3.Salir");
-            int opc = n.nextInt();
-            switch (opc){
-                case 1:
-                    System.out.println("Lista de los Recursos");
-                    listarM();
-                    break;
-                case 2:
-                    System.out.println("Crear recursos");
-                    System.out.println("1.Libros");
-                    System.out.println("2.Articulos");
-                    System.out.println("3.Cursos en Linea");
-                    System.out.println("4.Conferencias Virtuales");
-                    int opc2 = n.nextInt();
-                switch (opc2){
+                System.out.println("3.Salir");
+                int opc = n.nextInt();
+                switch (opc) {
                     case 1:
-                        boolean disponible = true;
-                        System.out.println("Ingrese el titulo del libro:");
-                        String titulo = n.nextLine();
-                        titulo= n.nextLine();
-                        System.out.println("Ingrese el Autor del libro:");
-                        String autor = n.nextLine();
-                        System.out.println("Ingrese el genero del libro:");
-                        String genero = n.nextLine();
-                        System.out.println("Ingrese año de publicacion");
-                        String publicacion = n.nextLine();
-                        System.out.println("Disponibilidad Y/N");
-                        String dispo = n.nextLine();
-                        switch (dispo){
-                            case "Y":
-                                disponible = true;
-                                break;
-                            case "N":
-                                 disponible = false;
-                                break;
-                            default:
-                                System.out.println("Se ingreso mal o no es valido");
-                                break;
-                        }
-                        Libros NuevoLibro = new Libros(titulo,autor,genero,publicacion,disponible);
-                        listLibros.add(NuevoLibro);
+                        System.out.println("Lista de los Recursos");
+                        listarM();
                         break;
                     case 2:
-                        disponible = true;
-                        System.out.println("Ingrese el titulo del articulo:");
-                        String titul = n.nextLine();
-                        titul = n.nextLine();
-                        System.out.println("Ingrese el Autor del articulo:");
-                        String autore = n.nextLine();
-                        System.out.println("Ingrese el tema del articulo:");
-                        String tema = n.nextLine();
-                        System.out.println("Ingrese año de publicacion");
-                        String publicacione = n.nextLine();
-                        System.out.println("Disponibilidad Y/N");
-                        String dispos = n.nextLine();
-                        switch (dispos){
-                            case "Y":
+                        System.out.println("Crear recursos");
+                        System.out.println("1.Libros");
+                        System.out.println("2.Articulos");
+                        System.out.println("3.Cursos en Linea");
+                        System.out.println("4.Conferencias Virtuales");
+                        int opc2 = n.nextInt();
+                        switch (opc2) {
+                            case 1:
+                                boolean disponible = true;
+                                System.out.println("Ingrese el titulo del libro:");
+                                String titulo = n.nextLine();
+                                titulo = n.nextLine();
+                                System.out.println("Ingrese el Autor del libro:");
+                                String autor = n.nextLine();
+                                System.out.println("Ingrese el genero del libro:");
+                                String genero = n.nextLine();
+                                System.out.println("Ingrese año de publicacion");
+                                String publicacion = n.nextLine();
+                                System.out.println("Disponibilidad Y/N");
+                                String dispo = n.nextLine();
+                                switch (dispo) {
+                                    case "Y":
+                                        disponible = true;
+                                        break;
+                                    case "N":
+                                        disponible = false;
+                                        break;
+                                    default:
+                                        System.out.println("Se ingreso mal o no es valido");
+                                        break;
+                                }
+                                Libros NuevoLibro = new Libros(titulo, autor, genero, publicacion, disponible);
+                                listLibros.add(NuevoLibro);
+                                break;
+                            case 2:
                                 disponible = true;
+                                System.out.println("Ingrese el titulo del articulo:");
+                                String titul = n.nextLine();
+                                titul = n.nextLine();
+                                System.out.println("Ingrese el Autor del articulo:");
+                                String autore = n.nextLine();
+                                System.out.println("Ingrese el tema del articulo:");
+                                String tema = n.nextLine();
+                                System.out.println("Ingrese año de publicacion");
+                                String publicacione = n.nextLine();
+                                System.out.println("Disponibilidad Y/N");
+                                String dispos = n.nextLine();
+                                switch (dispos) {
+                                    case "Y":
+                                        disponible = true;
+                                        break;
+                                    case "N":
+                                        disponible = false;
+                                        break;
+                                    default:
+                                        System.out.println("Se ingreso mal o no es valido");
+                                        break;
+                                }
+                                Articulos NuevoArt = new Articulos(titul, autore, tema, publicacione, disponible);
+                                listaArticu.add(NuevoArt);
                                 break;
-                            case "N":
-                                 disponible = false;
+                            case 3:
+                                disponible = true;
+                                System.out.println("Ingrese el titulo del Curso:");
+                                String titu = n.nextLine();
+                                titu = n.nextLine();
+                                System.out.println("Ingrese el Instructor:");
+                                String instructor = n.nextLine();
+                                System.out.println("Ingrese la duracion:");
+                                String duracion = n.nextLine();
+                                System.out.println("Ingrese la plataforma");
+                                String plataforma = n.nextLine();
+                                Cursos nuevoCurs = new Cursos(titu, instructor, duracion, plataforma);
+                                listaCursos.add(nuevoCurs);
                                 break;
-                            default:
-                                System.out.println("Se ingreso mal o no es valido");
+                            case 4:
+                                disponible = true;
+                                System.out.println("Ingrese el titulo del la conferencia:");
+                                String titulos = n.nextLine();
+                                titulos = n.nextLine();
+                                System.out.println("Ingrese el Conferisista:");
+                                String conferisista = n.nextLine();
+                                System.out.println("Ingrese la fecha:");
+                                String fecha = n.nextLine();
+                                System.out.println("Ingrese la duracion");
+                                String duracione = n.nextLine();
+                                System.out.println("Ingrese enlace");
+                                String enlace = n.nextLine();
+                                Conferencias nuevaConf = new Conferencias(titulos, conferisista, fecha, duracione, enlace);
+                                listaConfe.add(nuevaConf);
                                 break;
                         }
-                        Articulos NuevoArt = new Articulos(titul,autore,tema,publicacione,disponible);
-                        listaArticu.add(NuevoArt);
                         break;
                     case 3:
-                        disponible = true;
-                        System.out.println("Ingrese el titulo del Curso:");
-                        String titu = n.nextLine();
-                        titu = n.nextLine();
-                        System.out.println("Ingrese el Instructor:");
-                        String instructor = n.nextLine();
-                        System.out.println("Ingrese la duracion:");
-                        String duracion = n.nextLine();
-                        System.out.println("Ingrese la plataforma");
-                        String plataforma = n.nextLine();
-                        Cursos nuevoCurs = new Cursos(titu,instructor,duracion,plataforma);
-                        listaCursos.add(nuevoCurs);
+                        System.out.println("Saliendo....");
+                        entrar += 2;
                         break;
-                    case 4:
-                         disponible = true;
-                        System.out.println("Ingrese el titulo del la conferencia:");
-                        String titulos = n.nextLine();
-                        titulos = n.nextLine();
-                        System.out.println("Ingrese el Conferisista:");
-                        String conferisista = n.nextLine();
-                        System.out.println("Ingrese la fecha:");
-                        String fecha = n.nextLine();
-                        System.out.println("Ingrese la duracion");
-                        String duracione = n.nextLine();
-                        System.out.println("Ingrese enlace");
-                        String enlace = n.nextLine();
-                         Conferencias nuevaConf = new Conferencias(titulos,conferisista,fecha,duracione,enlace);
-                        listaConfe.add(nuevaConf);
+                    default:
+                        System.out.println("Opcion no valida");
                         break;
-                } 
-                break;
-                case 3:
-                    System.out.println("Saliendo....");
-                    entrar += 2;
-                    break;
-                default:
-                    System.out.println("Opcion no valida");
-                    break;
+                }
             }
-            } 
         }
 
     }
-    public static void login(){
+
+    public static void login() {
         Scanner n = new Scanner(System.in);
         String usuario;
         String contrasena;
@@ -302,28 +306,29 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
         while (login) {
             System.out.println("Ingrse Usuario");
             usuario = n.nextLine();
-            if (usuario.equals("adonys@gmail.com") || usuario.equals("venus@gmail.com")||usuario.equals("irene@gmail.com")) {
+            if (usuario.equals("adonys@gmail.com") || usuario.equals("venus@gmail.com") || usuario.equals("irene@gmail.com")) {
                 System.out.println("Ingrese contrasena");
                 contrasena = n.nextLine();
                 if (contrasena.equals("Dunai04")) {//es estudiante
                     estudiante = true;
                     login = false;
                 } else if (contrasena.equals("Venas10")) {//bibliotecaria
-                   biblioteca = true;
-                   login = false;
+                    biblioteca = true;
+                    login = false;
                 } else if (contrasena.equals("Irenex21")) {//profesor
                     profesor = true;
                     login = false;
                 } else {
                     System.out.println("contrasena invalida");
                 }
-            }else{
-                 System.out.println("El ususario no existe");
+            } else {
+                System.out.println("El ususario no existe");
             }
 
         }
     }
-    public static void listarM(){
+
+    public static void listarM() {
         System.out.println("Libros");
         for (int i = 0; i < listLibros.size(); i++) {
             Libros impr = listLibros.get(i);
@@ -349,40 +354,115 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
             System.out.println("");
         }
     }
-    public static void eliminarL(){
+
+    public static void eliminarL() {
         System.out.println("Eliminar De Lista");
-        
-    }
-     public static void modificarMasc() {
         Scanner n = new Scanner(System.in);
-        if (listLibros.isEmpty()&&listaArticu.isEmpty()&&listaConfe.isEmpty()&&listaCursos.isEmpty()) {
+        if (listLibros.isEmpty() && listaArticu.isEmpty() && listaConfe.isEmpty() && listaCursos.isEmpty()) {
             System.out.println("No hay inventario");
         } else {
-            for (int i = 0; i < listLibros.size(); i++) {
-                System.out.println("Lista de Inventario Para Modificar");
-                System.out.println("Lista de Libros");
-                System.out.println(i + ": " + listLibros.get(i).toString());
-                
+            System.out.println("1.Libros");
+            System.out.println("2.Conferencias");
+            System.out.println("3.Cursos");
+            System.out.println("4.Articulos");
+            int opcion = n.nextInt();
+            switch (opcion) {
+                case 1:
+                    for (int i = 0; i < listLibros.size(); i++) {
+                        System.out.println("Lista de Libros");
+                        System.out.println(i + ": " + listLibros.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere eliminar:");
+                    int indice = n.nextInt();
+                    
+                    break;
+                case 2:
+                    for (int i = 0; i < listaConfe.size(); i++) {
+                        System.out.println("Lista de Conferencias");
+                        System.out.println(i + ": " + listaConfe.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere eliminar:");
+                    indice = n.nextInt();
+                    break;
+                case 3:
+                    for (int i = 0; i < listaCursos.size(); i++) {
+                        System.out.println("Lista de Cursos");
+                        System.out.println(i + ": " + listaCursos.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere eliminar:");
+                    indice = n.nextInt();
+                    break;
+                case 4:
+                    for (int i = 0; i < listaArticu.size(); i++) {
+                        System.out.println("Lista de Articulos");
+                        System.out.println(i + ": " + listaArticu.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere eliminar:");
+                    indice = n.nextInt();
+                    break;
+                default:
+                    System.out.println("Opcion invalida");
+                    break;
             }
-            for (int i = 0; i < listLibros.size(); i++) {
-                System.out.println("Lista de ");
-                System.out.println(i + ": " + listLibros.get(i).toString());
-                
-            }
-            for (int i = 0; i < listLibros.size(); i++) {
-                System.out.println("Lista de Inventario Para Modificar");
-                System.out.println("Lista de Libros");
-                System.out.println(i + ": " + listLibros.get(i).toString());
-                
-            }
-            for (int i = 0; i < listLibros.size(); i++) {
-                System.out.println("Lista de Inventario Para Modificar");
-                System.out.println("Lista de Libros");
-                System.out.println(i + ": " + listLibros.get(i).toString());
-                
-            }
-            System.out.println("Ingrese el numero de la mascota que quiera modificar:");
-            int indice = n.nextInt();
         }
-     }
+    }
+
+    public static void modificarMasc() {
+        Scanner n = new Scanner(System.in);
+        if (listLibros.isEmpty() && listaArticu.isEmpty() && listaConfe.isEmpty() && listaCursos.isEmpty()) {
+            System.out.println("No hay inventario");
+        } else {
+
+            System.out.println("1.Libros");
+            System.out.println("2.Conferencias");
+            System.out.println("3.Cursos");
+            System.out.println("4.Articulos");
+            int opcion = n.nextInt();
+            switch (opcion) {
+                case 1:
+                    for (int i = 0; i < listLibros.size(); i++) {
+                        System.out.println("Lista de Libros");
+                        System.out.println(i + ": " + listLibros.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere modificar:");
+                    int indice = n.nextInt();
+                    listLibros.remove(indice);
+                    System.out.println("Se elimino!!!"); 
+                    break;
+                case 2:
+                    for (int i = 0; i < listaConfe.size(); i++) {
+                        System.out.println("Lista de Conferencias");
+                        System.out.println(i + ": " + listaConfe.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere modificar:");
+                    indice = n.nextInt();
+                    listaConfe.remove(indice);
+                    System.out.println("Se elimino!!!"); 
+                    break;
+                case 3:
+                    for (int i = 0; i < listaCursos.size(); i++) {
+                        System.out.println("Lista de Cursos");
+                        System.out.println(i + ": " + listaCursos.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere modificar:");
+                    indice = n.nextInt();
+                    listaCursos.remove(indice);
+                    System.out.println("Se elimino!!!"); 
+                    break;
+                case 4:
+                    for (int i = 0; i < listaArticu.size(); i++) {
+                        System.out.println("Lista de Articulos");
+                        System.out.println(i + ": " + listaArticu.get(i).toString());
+                    }
+                    System.out.println("Ingrese el numero del inventario que quiere modificar:");
+                    indice = n.nextInt();
+                    listaArticu.remove(indice);
+                    System.out.println("Se elimino!!!"); 
+                    break;
+                default:
+                    System.out.println("Opcion invalida");
+                    break;
+            }
+        }
+    }
 }
