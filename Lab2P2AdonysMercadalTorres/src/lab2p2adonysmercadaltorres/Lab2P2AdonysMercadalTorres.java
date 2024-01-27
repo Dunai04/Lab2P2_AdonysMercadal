@@ -169,9 +169,11 @@ public class Lab2P2AdonysMercadalTorres {
                         break;
                     case 3:
                         System.out.println("Eliminar Recursos");
+                        eliminarL();
                         break;
                     case 4:
                         System.out.println("Modificar Recursos");
+                        modificarInv();
                         break;
                     default:
                         System.out.println("Opcion no valida");
@@ -374,7 +376,8 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere eliminar:");
                     int indice = n.nextInt();
-                    
+                    listLibros.remove(indice);
+                    System.out.println("Se elimino!!!"); 
                     break;
                 case 2:
                     for (int i = 0; i < listaConfe.size(); i++) {
@@ -383,6 +386,8 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere eliminar:");
                     indice = n.nextInt();
+                    listaConfe.remove(indice);
+                    System.out.println("Se elimino!!!"); 
                     break;
                 case 3:
                     for (int i = 0; i < listaCursos.size(); i++) {
@@ -391,6 +396,8 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere eliminar:");
                     indice = n.nextInt();
+                    listaCursos.remove(indice);
+                    System.out.println("Se elimino!!!"); 
                     break;
                 case 4:
                     for (int i = 0; i < listaArticu.size(); i++) {
@@ -399,6 +406,8 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere eliminar:");
                     indice = n.nextInt();
+                    listaArticu.remove(indice);
+                    System.out.println("Se elimino!!!"); 
                     break;
                 default:
                     System.out.println("Opcion invalida");
@@ -407,12 +416,11 @@ public class Lab2P2AdonysMercadalTorres {
         }
     }
 
-    public static void modificarMasc() {
+    public static void modificarInv() {
         Scanner n = new Scanner(System.in);
         if (listLibros.isEmpty() && listaArticu.isEmpty() && listaConfe.isEmpty() && listaCursos.isEmpty()) {
             System.out.println("No hay inventario");
         } else {
-
             System.out.println("1.Libros");
             System.out.println("2.Conferencias");
             System.out.println("3.Cursos");
@@ -426,8 +434,23 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere modificar:");
                     int indice = n.nextInt();
-                    listLibros.remove(indice);
-                    System.out.println("Se elimino!!!"); 
+                    System.out.println("Ingrese el nuevo nombre del libro:");
+                    String nuevoNombre = n.nextLine();
+                    nuevoNombre = n.nextLine();
+                    Libros modLibro = listLibros.get(indice);
+                    modLibro.setTitulo(nuevoNombre);
+                    System.out.println("Ingrese el nuevo nombre del autor:");
+                    String nuevoau = n.nextLine();
+                    nuevoau = n.nextLine();
+                    modLibro.setAutor(nuevoau);
+                    System.out.println("Ingrese el nuevo genero:");
+                    String nuevoge = n.nextLine();
+                    nuevoge = n.nextLine();
+                    modLibro.setGenero(nuevoge);
+                    System.out.println("Ingrese el nuevo genero:");
+                    String nuevop = n.nextLine();
+                    nuevop = n.nextLine();
+                    modLibro.setPublicacion(nuevop);
                     break;
                 case 2:
                     for (int i = 0; i < listaConfe.size(); i++) {
@@ -436,8 +459,28 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere modificar:");
                     indice = n.nextInt();
-                    listaConfe.remove(indice);
-                    System.out.println("Se elimino!!!"); 
+                    System.out.println("Ingrese el nuevo nombre del articulo:");
+                    nuevoNombre = n.nextLine();
+                    nuevoNombre = n.nextLine();
+                    Conferencias modLibr = listaConfe.get(indice);
+                    modLibr.setTitulo(nuevoNombre);
+                    System.out.println("Ingrese el nuevo nombre del conferensista:");
+                    nuevoau = n.nextLine();
+                    nuevoau = n.nextLine();
+                    modLibr.setConferencista(nuevoau);
+                    System.out.println("Ingrese la nueva fecha:");
+                    nuevoge = n.nextLine();
+                    nuevoge = n.nextLine();
+                    modLibr.setFecha(nuevoge);
+                    System.out.println("Ingrese la nueva duracion:");
+                     nuevop = n.nextLine();
+                    nuevop = n.nextLine();
+                    modLibr.setDuracion(nuevop);
+                    System.out.println("Ingrese el nuevo enlace:");
+                    nuevop = n.nextLine();
+                    nuevop = n.nextLine();
+                    modLibr.setEnlace(nuevop);
+                    
                     break;
                 case 3:
                     for (int i = 0; i < listaCursos.size(); i++) {
@@ -446,8 +489,7 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere modificar:");
                     indice = n.nextInt();
-                    listaCursos.remove(indice);
-                    System.out.println("Se elimino!!!"); 
+                    System.out.println("INcompleto");
                     break;
                 case 4:
                     for (int i = 0; i < listaArticu.size(); i++) {
@@ -456,8 +498,7 @@ public class Lab2P2AdonysMercadalTorres {
                     }
                     System.out.println("Ingrese el numero del inventario que quiere modificar:");
                     indice = n.nextInt();
-                    listaArticu.remove(indice);
-                    System.out.println("Se elimino!!!"); 
+                    System.out.println("incompleto");
                     break;
                 default:
                     System.out.println("Opcion invalida");
