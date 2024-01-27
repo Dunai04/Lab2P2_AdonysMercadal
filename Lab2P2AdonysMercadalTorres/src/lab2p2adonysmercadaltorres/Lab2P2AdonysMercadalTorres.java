@@ -349,4 +349,40 @@ public static ArrayList<Conferencias> listaConfe = new ArrayList();
             System.out.println("");
         }
     }
+    public static void eliminarL(){
+        System.out.println("Eliminar De Lista");
+        
+    }
+     public static void modificarMasc() {
+        Scanner n = new Scanner(System.in);
+        if (listLibros.isEmpty()&&listaArticu.isEmpty()&&listaConfe.isEmpty()&&listaCursos.isEmpty()) {
+            System.out.println("No hay inventario");
+        } else {
+            for (int i = 0; i < listLibros.size(); i++) {
+                System.out.println("Lista de Inventario Para Modificar");
+                System.out.println("Lista de Libros");
+                System.out.println(i + ": " + listLibros.get(i).toString());
+                
+            }
+            for (int i = 0; i < listLibros.size(); i++) {
+                System.out.println("Lista de ");
+                System.out.println(i + ": " + listLibros.get(i).toString());
+                
+            }
+            for (int i = 0; i < listLibros.size(); i++) {
+                System.out.println("Lista de Inventario Para Modificar");
+                System.out.println("Lista de Libros");
+                System.out.println(i + ": " + listLibros.get(i).toString());
+                
+            }
+            for (int i = 0; i < listLibros.size(); i++) {
+                System.out.println("Lista de Inventario Para Modificar");
+                System.out.println("Lista de Libros");
+                System.out.println(i + ": " + listLibros.get(i).toString());
+                
+            }
+            System.out.println("Ingrese el numero de la mascota que quiera modificar:");
+            int indice = n.nextInt();
+        }
+     }
 }
